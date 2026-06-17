@@ -6,6 +6,7 @@ A collection of responsive web applications. These projects focus on user interf
 - HTML
 - CSS
 - JavaScript
+- PHP
 - Responsive Web Design
 - Local Storage
 - DOM Manipulation
