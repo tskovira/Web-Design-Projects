@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition Tracker</title>
+    <link rel="stylesheet" href="diet.css">
+    <script defer src="diet.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Nutrition Tracker - Your Way To Stay Healthy</h1>
+
+        <nav class="top-nav">
+            <a href="#recommended">Recommended</a>
+            <a href="#breakfast">Breakfast</a>
+            <a href="#lunch">Lunch</a>
+            <a href="#dinner">Dinner</a>
+            <a href="#snacks">Snacks</a>
+            <a href="#totals">Totals</a>
+            <a href="#summary">Summary</a>
+        </nav>
+
+        <div class="box" id="recommended">
+            <h2>Recommended Intake:</h2>
+            <p>Calories: <span id="recommendedCalories">2200</span></p>
+            <p>Fats: <span id="recommendedFats">85</span>g</p>
+            <p>Proteins: <span id="recommendedProteins">50</span>g</p>
+            <p>Carbs: <span id="recommendedCarbs">300</span>g</p>
+        </div>
+
+        <div class="meal-box" id="breakfast">
+            <h2>Breakfast <img src="images/breakfast.jpg" alt="Breakfast"> </h2>
+            <input type="text" placeholder="Food" id="breakfastItem">
+            <input type="number" placeholder="Calories" id="breakfastCalories">
+            <input type="number" placeholder="Fats (g)" id="breakfastFats">
+            <input type="number" placeholder="Proteins (g)" id="breakfastProteins">
+            <input type="number" placeholder="Carbs (g)" id="breakfastCarbs">
+            <button onclick="addMeal('breakfast')">Add</button>
+            <ul id="breakfastList"></ul>
+        </div>
+
+        <div class="meal-box" id="lunch">
+            <h2>Lunch <img src="images/lunch.jpg" alt="Breakfast"></h2>
+            <input type="text" placeholder="Food" id="lunchItem">
+            <input type="number" placeholder="Calories" id="lunchCalories">
+            <input type="number" placeholder="Fats (g)" id="lunchFats">
+            <input type="number" placeholder="Proteins (g)" id="lunchProteins">
+            <input type="number" placeholder="Carbs (g)" id="lunchCarbs">
+            <button onclick="addMeal('lunch')">Add</button>
+            <ul id="lunchList"></ul>
+        </div>
+
+        <div class="meal-box" id="dinner">
+            <h2>Dinner <img src="images/dinner.jpg" alt="Breakfast"></h2>
+            <input type="text" placeholder="Food" id="dinnerItem">
+            <input type="number" placeholder="Calories" id="dinnerCalories">
+            <input type="number" placeholder="Fats (g)" id="dinnerFats">
+            <input type="number" placeholder="Proteins (g)" id="dinnerProteins">
+            <input type="number" placeholder="Carbs (g)" id="dinnerCarbs">
+            <button onclick="addMeal('dinner')">Add</button>
+            <ul id="dinnerList"></ul>
+        </div>
+
+        <div class="meal-box" id="snacks">
+            <h2>Snacks <img src="images/snacks.jpg" alt="Breakfast"></h2>
+            <input type="text" placeholder="Food" id="snacksItem">
+            <input type="number" placeholder="Calories" id="snacksCalories">
+            <input type="number" placeholder="Fats (g)" id="snacksFats">
+            <input type="number" placeholder="Proteins (g)" id="snacksProteins">
+            <input type="number" placeholder="Carbs (g)" id="snacksCarbs">
+            <button onclick="addMeal('snacks')">Add</button>
+            <ul id="snacksList"></ul>
+        </div>
+
+        <div class="box" id="totals">
+            <h2>Totals:</h2>
+            <p>Calories: <span id="totalCalories">0</span> (<span id="calPercent">0</span>%)</p>
+            <p>Fats: <span id="totalFats">0</span>g (<span id="fatPercent">0</span>%)</p>
+            <p>Proteins: <span id="totalProteins">0</span>g (<span id="proteinPercent">0</span>%)</p>
+            <p>Carbs: <span id="totalCarbs">0</span>g (<span id="carbPercent">0</span>%)</p>
+        </div>
+
+        <div class="box" id="summary">
+            <h2>Summary:</h2>
+            <p>Total Meals: <span id="mealCount">0</span></p>
+            <p>Most Calorie Food: <span id="mostCal">N/A</span></p>
+            <p>Least Calorie Food: <span id="leastCal">N/A</span></p>
+        </div>
+
+        <form method="get" action="login.php">
+            <input type="submit" name="logout" value="Logout">
+        </form>
+    </div>
+</body>
+</html>
